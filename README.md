@@ -2,7 +2,7 @@
 
 Tests currently hit the real CRM API, which could lead to rate limiting or test pollution. With more time, I would implement mocking or use test doubles to isolate external calls. This would also be handy for unit testing the requests to the external API.
 
-External API URLs and tokens are hard-coded. These should be moved to environment variables or injected via a service class for flexibility and security.
+External API URLs are hard-coded. These should be moved to environment variables or injected via a service class for flexibility and security.
 
 Business logic lives inside controller methods. Refactoring to dedicated service classes would improve readability, support SOLID principles, and make the code easier to test. Due to the time constraint I did not get around to doing this.
 
