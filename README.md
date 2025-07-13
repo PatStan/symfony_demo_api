@@ -1,5 +1,3 @@
-# Propeller Backend Developer Task Submission
-
 ## Reflection and What I Could Improve
 
 Tests currently hit the real CRM API, which could lead to rate limiting or test pollution. With more time, I would implement mocking or use test doubles to isolate external calls. This would also be handy for unit testing the requests to the external API.
