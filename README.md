@@ -1,5 +1,8 @@
 ## Reflection and What I Could Improve
 
+I think most of the decisions I took were the right choice. I like that I implemented caching in a ListProvider, so I hit the external API to retrieve the IDs for lists, then cache it for 5 minutes so I don't spam requests and hit limits/throttles on the API.
+There is definitely room for improvement and expansion however:
+
 Tests currently hit the real CRM API, which could lead to rate limiting or test pollution. With more time, I would implement mocking or use test doubles to isolate external calls. This would also be handy for unit testing the requests to the external API.
 
 External API URLs are hard-coded. These should be moved to environment variables or injected via a service class for flexibility and security.
