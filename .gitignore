@@ -1,0 +1,21 @@
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/.env.test.local
+/.env.dev.local
+/.env.prod.local
+/config/secrets/prod/prod.decrypt.private.php
+/config/secrets/dev/dev.local.php.key
+/config/secrets/test/test.local.php.key
+/config/secrets/test/test.decrypt.private.php
+/config/secrets/dev/dev.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+/.phpunit.cache/
+###< phpunit/phpunit ###
