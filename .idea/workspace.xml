@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="afeaa0b6-34ed-4087-82d1-2b7c30da9125" name="Changes" comment="" />
+    <list default="true" id="afeaa0b6-34ed-4087-82d1-2b7c30da9125" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Request/CreateOrUpdateSubscriberRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/SubscriberService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Validator/ListExists.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Validator/ListExistsValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.dev" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dev" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SubscriberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SubscriberController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/ListProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ListService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ListTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ListTest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +30,17 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.4.11/bin/php">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
@@ -135,34 +158,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;PHPUnit.EnquiryTest.test_create_enquiry_successfully.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.ListTest.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.ListTest.test_can_get_lists_from_list_provider.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.ListTest.test_can_index_all_lists.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SubscriberTest.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SubscriberTest.testCreateSubscriber (1).executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SubscriberTest.testCreateSubscriber.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SubscriberTest.testExample.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SubscriberTest.test_create_subscriber_successfully.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SubscriberTest.test_create_subscriber_validation.executor&quot;: &quot;Run&quot;,
-    &quot;PHPUnit.SubscriberTest.test_create_subscriber_with_missing_marketing_consent.executor&quot;: &quot;Run&quot;,
-    &quot;Pest.ExampleTest.php::example.executor&quot;: &quot;Run&quot;,
-    &quot;Pest.SubscriberTest.php::create subscriber via api route.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.23737374&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "PHPUnit.EnquiryTest.test_create_enquiry_successfully.executor": "Run",
+    "PHPUnit.ListTest.executor": "Run",
+    "PHPUnit.ListTest.test_can_get_lists_from_list_provider.executor": "Run",
+    "PHPUnit.ListTest.test_can_index_all_lists.executor": "Run",
+    "PHPUnit.SubscriberTest.executor": "Run",
+    "PHPUnit.SubscriberTest.testCreateSubscriber (1).executor": "Run",
+    "PHPUnit.SubscriberTest.testCreateSubscriber.executor": "Run",
+    "PHPUnit.SubscriberTest.testExample.executor": "Run",
+    "PHPUnit.SubscriberTest.test_create_subscriber_successfully.executor": "Run",
+    "PHPUnit.SubscriberTest.test_create_subscriber_validation.executor": "Run",
+    "PHPUnit.SubscriberTest.test_create_subscriber_with_missing_marketing_consent.executor": "Run",
+    "Pest.ExampleTest.php::example.executor": "Run",
+    "Pest.SubscriberTest.php::create subscriber via api route.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.23737374",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="PHPUnit.ListTest.test_can_get_lists_from_list_provider">
     <configuration name="EnquiryTest.test_create_enquiry_successfully" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="App\Tests\Feature\EnquiryTest" configuration_file="$PROJECT_DIR$/phpunit.dist.xml" file="$PROJECT_DIR$/tests/Feature/EnquiryTest.php" method="test_create_enquiry_successfully" paratest_binary_path="$PROJECT_DIR$/vendor/bin/paratest_for_phpstorm" scope="Method" />
@@ -185,12 +208,6 @@
       <method v="2" />
     </configuration>
     <configuration name="Main" type="PestRunConfigurationType">
-      <option name="pestRunnerSettings">
-        <PestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
-      </option>
-      <option name="runnerSettings">
-        <PhpTestRunnerSettings configuration_file="$PROJECT_DIR$/phpunit.xml" scope="ConfigurationFile" use_alternative_configuration_file="true" />
-      </option>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -206,8 +223,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PS-251.26927.60" />
-        <option value="bundled-php-predefined-a98d8de5180a-e5747d4f5a45-com.jetbrains.php.sharedIndexes-PS-251.26927.60" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PS-252.23892.419" />
+        <option value="bundled-php-predefined-a98d8de5180a-c72577f2c82f-com.jetbrains.php.sharedIndexes-PS-252.23892.419" />
       </set>
     </attachedChunks>
   </component>
@@ -220,6 +237,8 @@
       <updated>1751911194653</updated>
       <workItem from="1751911195804" duration="5777000" />
       <workItem from="1752337498286" duration="34230000" />
+      <workItem from="1755677471507" duration="248000" />
+      <workItem from="1755677932567" duration="19911000" />
     </task>
     <servers />
   </component>

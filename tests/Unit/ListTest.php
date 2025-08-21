@@ -10,7 +10,7 @@ class ListTest extends WebTestCase
     {
         $client = static::createClient();
         $container = $client->getContainer();
-        $listProvider = $container->get('App\Service\ListProvider');
+        $listProvider = $container->get('App\Service\ListService');
 
         $lists = $listProvider->getLists();
 

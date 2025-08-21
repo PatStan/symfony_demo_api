@@ -1,0 +1,71 @@
+volumes:
+    db_data:
+
+services:
+    app:
+        #image: public.ecr.aws/propeller/symfony:8.4
+        build:
+            context: .
+            dockerfile: ./Dockerfile-dev
+        volumes:
+            - ./:/app
+        ports:
+            - "9080:80"
+        environment:
+            GITHUB_ACCESS_TOKEN: ${PROPCOM_GITHUB_ACCESS_TOKEN}
+            PROPCOM_ENABLE_SWAGGER: true
+            PROPCOM_ENABLE_REDOC: true
+            PROPCOM_PHP_ENABLE_XDEBUG: true
+
+    db:
+        image: mysql:8.0.39
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_DATABASE: app_db
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: rootpassword
+        ports:
+            - "9083:3306"
+        volumes:
+            - db_data:/var/lib/mysql
+
+    swagger:
+        image: swaggerapi/swagger-ui
+        environment:
+            BASE_URL: /swagger
+            SWAGGER_JSON: /openapi/spec.yaml
+        platform: linux/amd64
+        volumes:
+            - ./docs/openapi:/openapi
+
+    redoc:
+        image: redocly/redoc
+        environment:
+            SPEC_URL: "/redoc/spec.yaml"
+        volumes:
+            - ./docs/openapi/spec.yaml:/usr/share/nginx/html/spec.yaml
+
+    smtp:
+        image: axllent/mailpit:v1.26
+        ports:
+            - "9084:8025"
+
+    crm-mitm:
+        image: mitmproxy/mitmproxy:11.0
+        ports:
+            - 10011:10011
+        command: |
+            mitmweb --web-host 0.0.0.0 --web-port 10011 -p 10001
+              --mode 'reverse:http://host.docker.internal:8080'
+              --modify-headers '!~q!Host!host.docker.internal:8080'
+
+    api-mitm:
+        image: mitmproxy/mitmproxy:11.0
+        ports:
+            - "10000:10000"
+            - "10010:10000"
+        command: |
+            mitmweb --web-host 0.0.0.0 --web-port 10010 -p 10000
+              --mode reverse:'http://app:80'
+              --modify-headers '!~q!Host!app'

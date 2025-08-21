@@ -8,13 +8,15 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 
-class ListProvider
+class ListService
 {
-    private string $token;
-
-    public function __construct(private HttpClientInterface $httpClient, private CacheInterface $cache, ParameterBagInterface $params)
+    public function __construct(
+        protected string $baseUrl,
+        protected string $accessToken,
+        private HttpClientInterface $httpClient,
+        private CacheInterface $cache,
+        )
     {
-        $this->token = $params->get('HTTP_TOKEN');
     }
 
     public function getLists(): array
@@ -22,13 +24,13 @@ class ListProvider
         return $this->cache->get('lists', function (ItemInterface $item) {
             $item->expiresAfter(300);
 
-            if (!$this->token) {
+            if (!$this->accessToken) {
                 throw new \RuntimeException('HTTP token missing');
             }
 
-            $response = $this->httpClient->request('GET', 'https://devtest-crm-api.standard.aws.prop.cm/api/lists', [
+            $response = $this->httpClient->request('GET', $this->baseUrl . '/api/lists', [
                 'headers' => [
-                    'Authorization' => 'Bearer ' . $this->token,
+                    'Authorization' => 'Bearer ' . $this->accessToken,
                     'Accept' => 'application/json',
                 ],
             ]);
@@ -36,7 +38,6 @@ class ListProvider
             if ($response->getStatusCode() !== 200) {
                 throw new \RuntimeException('Failed to fetch lists');
             }
-
 
             $data = $response->toArray();
 
