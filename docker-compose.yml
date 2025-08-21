@@ -59,13 +59,3 @@ services:
             mitmweb --web-host 0.0.0.0 --web-port 10011 -p 10001
               --mode 'reverse:http://host.docker.internal:8080'
               --modify-headers '!~q!Host!host.docker.internal:8080'
-
-    api-mitm:
-        image: mitmproxy/mitmproxy:11.0
-        ports:
-            - "10000:10000"
-            - "10010:10000"
-        command: |
-            mitmweb --web-host 0.0.0.0 --web-port 10010 -p 10000
-              --mode reverse:'http://app:80'
-              --modify-headers '!~q!Host!app'

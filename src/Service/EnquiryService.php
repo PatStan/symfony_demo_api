@@ -27,7 +27,8 @@ class EnquiryService
 
         $data = $response->toArray();
 
-        if ($response->getStatusCode() !== 200) {
+        if ($response->getStatusCode() !== 200)
+        {
             return new JsonResponse([
                 'error' => 'Failed to create enquiry: ' . $data['error'],
                 'message' => $data['message'],
