@@ -22,9 +22,7 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 final class SubscriberController extends AbstractController
 {
     public function __construct(
-        private readonly SerializerInterface    $serializer,
-        private readonly EntityManagerInterface $entityManager,
-        private SubscriberService $subscriberService,
+        private readonly SubscriberService $subscriberService,
     ) {
     }
 
@@ -33,7 +31,7 @@ final class SubscriberController extends AbstractController
         #[MapRequestPayload] CreateOrUpdateSubscriberRequest $request,
     ): JsonResponse
     {
-        $subscriber = $this->subscriberService->subscribe(
+        $data = $this->subscriberService->subscribe(
             $request->emailAddress,
             $request->firstName,
             $request->lastName,
@@ -44,7 +42,7 @@ final class SubscriberController extends AbstractController
 
         return new JsonResponse([
             'message' => 'Subscriber created or updated successfully.',
-            'data' => $subscriber->toArray(),
+            'subscriber' => $data['subscriber'],
         ]);
     }
 }

@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afeaa0b6-34ed-4087-82d1-2b7c30da9125" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Request/CreateOrUpdateSubscriberRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Service/SubscriberService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/ListExists.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/ListExistsValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.dev" beforeDir="false" afterPath="$PROJECT_DIR$/.env.dev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Request/CreateEnquiryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/EnquiryService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/EnquiryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/EnquiryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SubscriberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SubscriberController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ListProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ListService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ListTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ListTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/SubscriberService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/SubscriberService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +230,7 @@
       <workItem from="1751911195804" duration="5777000" />
       <workItem from="1752337498286" duration="34230000" />
       <workItem from="1755677471507" duration="248000" />
-      <workItem from="1755677932567" duration="19911000" />
+      <workItem from="1755677932567" duration="25685000" />
     </task>
     <servers />
   </component>

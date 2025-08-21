@@ -29,3 +29,8 @@ services:
         arguments:
             $baseUrl: '%env(CRM_BASE_URL)%'
             $accessToken: '%env(CRM_ACCESS_TOKEN)%'
+
+    App\Service\EnquiryService:
+        arguments:
+            $baseUrl: '%env(CRM_BASE_URL)%'
+            $accessToken: '%env(CRM_ACCESS_TOKEN)%'

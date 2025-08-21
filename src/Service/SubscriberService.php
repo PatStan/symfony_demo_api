@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\Entity\Subscriber;
-use App\Request\CreateOrUpdateSubscriberRequest;
-use GuzzleHttp\Promise\Create;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
@@ -16,7 +13,6 @@ class SubscriberService
         protected string                     $baseUrl,
         protected string                     $accessToken,
         private readonly HttpClientInterface $httpClient,
-        private readonly ListService         $listService,
     )
     {
 
@@ -50,11 +46,16 @@ class SubscriberService
             ],
         ]);
 
+        $data = $response->toArray();
+
         if ($response->getStatusCode() !== 200) {
-            return new JsonResponse(['error' => 'Failed to create or update subscriber'], $response->getStatusCode());
+            return new JsonResponse([
+                'error' => $data['error'],
+                'message' => $data['message'],
+            ], $response->getStatusCode());
         }
 
-        return $response;
+        return $data;
     }
 
     public function get(string $subscriberId)
